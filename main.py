@@ -10,12 +10,12 @@ from webdriver_manager.chrome import ChromeDriverManager
 
 # ----- Chrome options -----
 options = webdriver.ChromeOptions()
-# Yeh line ensure karegi ki aapka login (QR scan) ek hi baar ho aur baar-baar na karna pade
-options.add_argument(r"user-data-dir=C:\WhatsAppProfile")
+#to login teh whatsapp one time only 
+options.add_argument(r"user-data-dir=C:\WhatsAppProfile")  #create an empty folder and give the path here 
 
 # ----- Configuration -----
 WHATSAPP_URL = "https://web.whatsapp.com/"
-TARGET_NAME = "Chachi"
+TARGET_NAME = "Contact name"  #write the name of the contact here 
 MESSAGE_TEXT = "Message sent using Python!!!"
 MESSAGE_COUNT = 10
 DELAY_BETWEEN_MESSAGES = 1
@@ -55,3 +55,4 @@ finally:
     print("✅ Task completed. Closing browser in 5 seconds...")
     time.sleep(5)
     driver.quit()
+
